@@ -9,6 +9,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
+  AlertDialogFooter
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 
@@ -33,9 +34,6 @@ export const AlertModal = ({
   return (
     <AlertDialog isOpen={isOpen} onOpenChange={onClose}>
       <AlertDialogTrigger asChild>
-        <Button disabled={loading} variant="outline">
-          Show Dialog
-        </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
