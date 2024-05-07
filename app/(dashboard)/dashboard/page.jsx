@@ -325,7 +325,7 @@ const renderPlacementVsBatchesChart = (placementData) => {
       <SelectContent>
         <SelectGroup>
             {[...new Set(placementData.map(item => item.students.passing_year))].map(year => (
-          <SelectItem value={year}>{year}</SelectItem>
+          <SelectItem key={year} value={year}>{year}</SelectItem>
         ))}
 
         </SelectGroup>
