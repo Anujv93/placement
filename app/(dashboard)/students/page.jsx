@@ -11,7 +11,7 @@ import { DataTableDemo } from "@/components/custom/table/students/student-table"
 import { columns } from "@/components/custom/table/students/columns";
 import { createClient } from "@/utils/supabase/client";
 
-const breadcrumbItems = [{ title: "Hotels", link: "/dashboard/hotels" }];
+const breadcrumbItems = [{ title: "Hotels", link: "/students" }];
 
 
 export default function Students() {
@@ -44,12 +44,6 @@ export default function Students() {
             description="Manage hotels (Server side table functionalities.)"
           />
 
-          <Link
-            href={"/dashboard/hotels/addNew"}
-            className={cn(buttonVariants({ variant: "default" }))}
-          >
-            <Plus className="mr-2 h-4 w-4" /> Add New
-          </Link>
         </div>
         <Separator />
         <DataTableDemo columns={columns} data={students}/>
